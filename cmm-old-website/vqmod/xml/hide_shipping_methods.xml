@@ -1,0 +1,33 @@
+<modification>
+	<id>Hide Shipping Methods When Free Shipping Is Active</id>
+	<version>1.0</version>
+	<vqmver>2.x</vqmver>
+	<author>Jimi R</author>
+	
+	<file name="catalog/controller/checkout/cart.php">
+		<operation error="skip" info="hide shipping methods">
+			<search position="before"><![CDATA[
+				$this->session->data['shipping_methods'] = $quote_data;
+			]]></search>
+			<add><![CDATA[
+				if (isset($quote_data['free'])) {
+    				$free_only['free'] = $quote_data['free'];
+    				$quote_data = $free_only;
+				}
+			]]></add>
+		</operation>
+    </file>
+	<file name="catalog/controller/checkout/shipping_method.php">
+		<operation error="skip" info="hide shipping methods">
+			<search position="before"><![CDATA[
+				$this->session->data['shipping_methods'] = $quote_data;
+			]]></search>
+			<add><![CDATA[
+				if (isset($quote_data['free'])) {
+    				$free_only['free'] = $quote_data['free'];
+    				$quote_data = $free_only;
+				}
+			]]></add>
+		</operation>
+    </file>	
+</modification>

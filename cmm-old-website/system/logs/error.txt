@@ -1,0 +1,2 @@
+2018-08-19 19:31:37 - AUTHNET AIM CURL ERROR: 3::<url> malformed
+2018-10-28 13:59:22 - AUTHNET AIM CURL ERROR: 3::<url> malformed

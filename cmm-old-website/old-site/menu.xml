@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu>
+  <item title="Home" link="page8.html"/>
+  <item title="Products" link="page11.html"/>
+  <item title="Services" link="page1.html"/>
+  <item title="Support" link="page16.html"/>
+</menu>
